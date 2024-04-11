@@ -1,0 +1,12 @@
+<section>
+  @if (isLoggedIn) {
+  <p>Bienvenido, {{username}}</p>
+  <img src="https://github.com/maximopeoficiales.png" alt="photo">
+  <app-games [username]="username" (addFavoriteEvent)="getFavorite($event)"></app-games>
+  @if (favGame!== '') {
+  <p>Tu juego favorito es: {{favGame}}</p>
+  }
+  }@else {
+  <button (click)="greet()">!Inicia Sesion¡</button>
+  }
+</section>
